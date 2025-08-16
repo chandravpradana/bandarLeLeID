@@ -1,0 +1,14 @@
+/* Catatan Script */
+/* File: css/base/global.css */
+/* Deskripsi:
+   - CSS dasar untuk reset, font, dan variabel tema.
+   - Menggunakan variabel CSS untuk konsistensi warna.
+   - Font utama menggunakan Google Fonts.
+*/
+
+
+.content {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: auto;
+}

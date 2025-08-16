@@ -1,0 +1,50 @@
+/* Catatan dan Deskripsi Script */
+/* File: css/components/table.css */
+/* Deskripsi:
+  - Gaya untuk tabel riwayat pada halaman utama
+  - Menggunakan warna latar belakang dan bayangan untuk efek visual
+*/  
+
+.history-section {
+  margin: 60px auto;
+  max-width: 1000px;
+}
+.history-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+.history-table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+.history-table th {
+  background-color: var(--accent-color);
+  color: #111;
+  padding: 15px 20px;
+}
+.history-table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+.status-selesai {
+  background-color: var(--success-color);
+  color: white;
+}
+.status-terlewat {
+  background-color: var(--warning-color);
+  color: white;
+}

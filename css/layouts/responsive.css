@@ -1,0 +1,82 @@
+/* Catatan dan Deskripsi Script */
+/* File: css/layouts/responsive.css */
+/* Deskripsi: 
+  - Gaya responsif untuk halaman utama
+  - Menggunakan media queries untuk menyesuaikan tampilan pada berbagai ukuran layar
+*/
+
+/* === Tablet (max-width: 768px) === */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 15px;
+    gap: 40px; /* Jarak antar section sedikit diperkecil */
+  }
+  
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1.1rem; }
+  
+  .feeding-form { padding: 25px; }
+  .feature-card { min-width: 100%; }
+  
+  .history-table { font-size: 0.9rem; }
+  .stats-container { flex-direction: column; }
+}
+
+/* === Mobile (max-width: 480px) === */
+@media (max-width: 480px) {
+  .content {
+    padding: 15px 10px;
+    gap: 30px; /* Jarak makin compact */
+  }
+
+  .logo h1 { font-size: 1.5rem; }
+  
+  .hero { padding: 20px; }
+  .hero h1 { font-size: 1.8rem; }
+  
+  .feeding-form { padding: 20px; }
+  .form-group input, 
+  .form-group select { 
+    padding: 12px 12px 12px 40px; 
+  }
+  
+  .history-table { font-size: 0.8rem; }
+  .theme-toggle { top: 70px; right: 15px; }
+}
+/* === Desktop (min-width: 769px) === */
+@media (min-width: 769px) {
+  .content {
+    padding: 40px 30px;
+    gap: 60px; /* Jarak antar section lebih lebar */
+  }
+  
+  .hero h1 { font-size: 2.5rem; }
+  .hero p { font-size: 1.2rem; }
+  
+  .feeding-form { padding: 30px; }
+  
+  .feature-card { min-width: 280px; max-width: 350px; }
+  
+  .history-table { font-size: 1rem; }
+  
+  .stats-container { flex-direction: row; }
+}
+
+/* === Large Screens (min-width: 1200px) === 
+@media (min-width: 1200px) {      
+  .content {
+    padding: 60px 50px;
+    gap: 80px; /* Jarak antar section lebih besar 
+  }
+  
+  .hero h1 { font-size: 3rem; }
+  .hero p { font-size: 1.3rem; }
+  
+  .feeding-form { padding: 40px; }
+  
+  .feature-card { min-width: 300px; max-width: 400px; }
+  
+  .history-table { font-size: 1.1rem; }
+  
+  .stats-container { flex-direction: row; justify-content: space-between; }
+}
