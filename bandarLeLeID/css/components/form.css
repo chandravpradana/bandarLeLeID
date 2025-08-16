@@ -1,0 +1,67 @@
+/* Catatan dan Deskripsi Script */
+/* File: css/components/form.css */
+/* Deskripsi:
+  - Gaya untuk form laporan pakan
+  - Menggunakan warna latar belakang, bayangan, dan transisi untuk efek visual
+*/
+
+
+.feeding-form {
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--form-bg);
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  max-width: 600px;
+  border: 1px solid var(--border-color);
+}
+.feeding-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+.feeding-form h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--accent-color);
+}
+.form-group {
+  margin-bottom: 24px;
+  position: relative;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+.form-group i {
+  position: absolute;
+  left: 15px;
+  top: 42px;
+  color: var(--accent-color);
+  opacity: 0.7;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid #555;
+  border-radius: 8px;
+  font-size: 1.05rem;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}

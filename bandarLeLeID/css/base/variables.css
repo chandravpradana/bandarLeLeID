@@ -1,0 +1,31 @@
+/* Catatan Script */
+/* File: css/base/variables.css */
+/* Deskripsi:
+   - Variabel CSS untuk konsistensi tema.
+   - Menggunakan variabel untuk warna, font, dan elemen UI.
+*/
+
+:root {
+  --bg-color: #111;
+  --text-color: #eee;
+  --accent-color: #d4af37;
+  --footer-bg: #1a1a1a;
+  --form-bg: rgba(30,30,30,0.7);
+  --card-bg: rgba(25,25,25,0.8);
+  --border-color: rgba(212,175,55,0.3);
+  --success-color: #4CAF50;
+  --warning-color: #FF9800;
+  --info-color: #2196F3;
+}
+.light-theme {
+  --bg-color: #f8f8f8;
+  --text-color: #111;
+  --accent-color: #b89100;
+  --footer-bg: #ffffff;
+  --form-bg: rgba(245,245,245,0.9);
+  --card-bg: rgba(255,255,255,0.9);
+  --border-color: rgba(184,145,0,0.3);
+  --success-color: #388E3C;
+  --warning-color: #F57C00;
+  --info-color: #1976D2;
+}

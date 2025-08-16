@@ -1,0 +1,37 @@
+/* Catatan dan Deskripsi Script */
+/* File: css/components/telegram.css */
+/* Deskripsi:
+  - Gaya untuk integrasi Telegram pada halaman utama
+  - Menggunakan warna latar belakang, bayangan, dan QR code untuk efek visual
+*/  
+
+
+.telegram-integration {
+  background: var(--form-bg);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 600px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+.telegram-integration h3 {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.telegram-integration .qr-code {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background: #0088cc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-direction: column;
+}

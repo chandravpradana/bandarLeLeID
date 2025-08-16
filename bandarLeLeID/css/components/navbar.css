@@ -1,0 +1,93 @@
+/* Catatan Script */
+/* File: css/components/navbar.css */
+/* Deskripsi: 
+   - CSS untuk navbar yang responsif dan interaktif.
+   - Menggunakan flexbox untuk tata letak.
+   - Efek transisi pada hover dan scroll.
+   - Logo dengan efek skala saat hover.
+*/
+
+.navbar {
+  display:flex; 
+  align-items:center; 
+  gap:16px;
+  padding:12px 24px;
+  position:sticky; 
+  top:0; 
+  width:100%;
+  background: rgba(17,17,17,0.9);
+  z-index:1000;
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.navbar.scrolled { 
+  box-shadow:0 4px 20px rgba(212,175,55,0.3); 
+  background: rgba(17,17,17,0.95); 
+}
+.logo { 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor:pointer; 
+  transition: transform 0.4s ease; 
+}
+.logo:hover { transform: scale(1.05); }
+.logo i {
+  font-size: 28px;
+  color: var(--accent-color);
+}
+.logo h1 {
+  font-size: 1.8rem;
+  background: linear-gradient(to right, #d4af37, #f9e076);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Theme Toggle di dalam Navbar */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto; /* Dorong ke kanan */
+}
+
+.navbar .theme-toggle span {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Switch tetap sama */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+.switch input {
+  opacity: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  inset: 0;
+  transition: .4s;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
