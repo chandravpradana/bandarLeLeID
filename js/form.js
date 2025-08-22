@@ -6,12 +6,18 @@ export function initForm() {
         e.preventDefault();
 
         const data = {
-            tanggal: document.getElementById('tanggal').value,
-            waktu: document.getElementById('waktu').value,
-            kolam: document.querySelector('#kolam option:checked').textContent,
-            jenisPakan: document.querySelector('#jenis-pakan option:checked').textContent,
-            jumlah: document.getElementById('jumlah').value,
-            pelaksana: document.querySelector('#pelaksana option:checked').textContent
+            const Angkatan = document.getElementById('Angkatan').value;
+            const tanggal = document.getElementById('tanggal').value;
+            const waktu = document.getElementById('waktu').value;
+            const jenisPakan = document.getElementById('jenis-pakan').value;
+            const jumlah = document.getElementById('jumlah').value;
+            const jenisObat = document.getElementById('jenis-obat').value;
+            const jumlahObat = document.getElementById('jumlahobat').value;
+            const pelaksana = document.getElementById('pelaksana').value;
+
+            const AngkatanText = document.querySelector('#Angkatan option:checked').textContent;
+            const jenisPakanText = document.querySelector('#jenis-pakan option:checked').textContent;
+            const pelaksanaText = document.querySelector('#pelaksana option:checked').textContent;
         };
 
         addHistoryRow(data);
@@ -34,30 +40,38 @@ function setDefaultDateTime() {
 }
 
 function addHistoryRow(data) {
-    const tableBody = document.getElementById('history-body');
-    const newRow = document.createElement('tr');
-    newRow.innerHTML = `
-        <td>${data.tanggal}</td>
-        <td>${data.waktu}</td>
-        <td>${data.kolam}</td>
-        <td>${data.jenisPakan}</td>
-        <td>${data.jumlah}</td>
-        <td>${data.pelaksana}</td>
-        <td><span class="status status-selesai">Terkirim</span></td>
-    `;
+            const tableBody = document.querySelector('.history-table tbody');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${tanggal}</td>
+                <td>${waktu}</td>
+                <td>${AngkatanText}</td>
+                <td>${jenisPakanText}</td>
+                <td>${jumlah}</td>
+                <td>${jenisObat}</td>
+                <td>${jumlahObat}</td>
+                <td>${pelaksanaText}</td>
+                <td><span class="status status-selesai">Terkirim</span></td>
+            `;
+            tableBody.insertBefore(newRow, tableBody.firstChild);
     tableBody.insertBefore(newRow, tableBody.firstChild);
 }
 
 function sendTelegram(data) {
     const botToken = '8190460652:AAHu2L_0O_jzTJmxBo4mkQTSERPZYAmghjI';
     const chatId = '-1002637747100';
-    const message = `
-📋 *LAPORAN PAKAN TERKIRIM*
-📅 ${data.tanggal} ⏰ ${data.waktu}
-🏞️ ${data.kolam}
-🍽️ ${data.jenisPakan}
-⚖️ ${data.jumlah} gram
-👤 ${data.pelaksana}
+📋 *System Laporan Pakan* 
+
+📅 Tanggal: ${tanggal}
+⏰ Waktu: ${waktu}
+🏞️ Angkatan: ${AngkatanText}
+🍽️ Jenis Pakan: ${jenisPakanText}
+⚖️ Jumlah: ${jumlah} gram
+💊 Jenis Obat: ${jenisObat}
+⚖️ Jumlah Obat: ${jumlahObat} tutup
+👤 Pelaksana: ${pelaksanaText}
+
+✅ Laporan berhasil disimpan!
     `;
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: 'POST',
@@ -79,4 +93,5 @@ function showNotification(message, type) {
     document.body.appendChild(notif);
     setTimeout(() => notif.remove(), 3000);
 }
+
 
