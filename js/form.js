@@ -49,8 +49,8 @@ function addHistoryRow(data) {
 }
 
 function sendTelegram(data) {
-    const botToken = 'TOKEN_BOT';
-    const chatId = 'CHAT_ID';
+    const botToken = '8190460652:AAHu2L_0O_jzTJmxBo4mkQTSERPZYAmghjI';
+    const chatId = '-1002637747100';
     const message = `
 📋 *LAPORAN PAKAN TERKIRIM*
 📅 ${data.tanggal} ⏰ ${data.waktu}
@@ -79,3 +79,4 @@ function showNotification(message, type) {
     document.body.appendChild(notif);
     setTimeout(() => notif.remove(), 3000);
 }
+
